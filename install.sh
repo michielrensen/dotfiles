@@ -425,8 +425,8 @@ sudo systemsetup -setcomputersleep Off > /dev/null;ok
 running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1;ok
 
-running "Disable Notification Center and remove the menu bar icon"
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist > /dev/null 2>&1;ok
+# running "Disable Notification Center and remove the menu bar icon"
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist > /dev/null 2>&1;ok
 
 running "Disable smart quotes as they’re annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false;ok
@@ -786,10 +786,10 @@ bot "Terminal & iTerm2"
 # i.e. hover over a window and start `typing in it without clicking first
 defaults write com.apple.terminal FocusFollowsMouse -bool true
 #defaults write org.x.X11 wm_ffm -bool true;ok
-running "Installing the Solarized Light theme for iTerm (opening file)"
-open "./configs/Solarized Light.itermcolors";ok
-running "Installing the Solarized Dark theme for iTerm (opening file)"
-open "./configs/Solarized Dark.itermcolors";ok
+# running "Installing the Solarized Light theme for iTerm (opening file)"
+# open "./configs/Solarized Light.itermcolors";ok
+# running "Installing the Solarized Dark theme for iTerm (opening file)"
+# open "./configs/Solarized Dark.itermcolors";ok
 
 running "Don’t display the annoying prompt when quitting iTerm"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false;ok

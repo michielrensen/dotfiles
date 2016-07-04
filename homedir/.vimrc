@@ -6,9 +6,6 @@ if has('gui_running')
 else
     set background=dark
 endif
-colorscheme solarized
-" syntax on " syntax highlighting on
-syntax enable
 let g:solarized_termtrans = 1
 call togglebg#map("<F5>")
 
@@ -30,18 +27,20 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'godlygeek/tabular'
 " language tools
 Plugin 'scrooloose/syntastic'
 Plugin 'millermedeiros/vim-esformatter'
 Plugin 'digitaltoad/vim-pug'
-"Plugin 'sheerun/vim-polyglot'
-
+Plugin 'sheerun/vim-polyglot'
+Plugin 'ronny/birds-of-paradise.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'node.js'
 Plugin 'SuperTab'
@@ -58,6 +57,9 @@ Plugin 'SuperTab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+colorscheme birds-of-paradise
+" syntax on " syntax highlighting on
+syntax enable
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -80,7 +82,10 @@ set ffs=unix,dos,mac " support all three, in this order
 set viminfo+=! " make sure it can save viminfo
 set isk+=_,$,@,%,# " none of these should be word dividers, so make them not be
 set nosol " leave my cursor where it was
-
+" Whether to use .vimrc configuration from vim's current directory.
+" Enabling exrc is a security risk since a rogue .vimrc can execute
+" commands inside your editor.
+set noexrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files/Backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,11 +103,12 @@ set sessionoptions+=winpos " What should be saved during sessions being saved
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set lsp=0 " space it out a little more (easier to read)
 set wildmenu " turn on wild menu
-set wildmode=list:longest " turn on wild menu in special format (long format)
+set wildmode=longest,list,full " turn on wild menu in special format (long format)
 set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.swp,*.jpg,*.gif,*.png " ignore formats
 set ruler " Always show current positions along the bottom
 set cmdheight=1 " the command bar is 1 high
 set number " turn on line numbers
+set numberwidth=5
 set lz " do not redraw while running macros (much faster) (LazyRedraw)
 set hid " you can change buffer without saving
 set backspace=2 " make backspace work normal
@@ -150,8 +156,10 @@ set preserveindent " but above all -- follow the conventions laid before us
 set ignorecase " case insensitive by default
 set smartcase " if there are caps, go case-sensitive
 set completeopt=menu,longest,preview " improve the way autocomplete works
-set cursorcolumn " show the current column
-
+" set cursorcolumn " show the current column
+set nocursorcolumn
+set cursorline
+hi CursorLine term=underline ctermbg=008 guibg=#493a35
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "    Enable folding, but by default make it act like folding is
@@ -241,6 +249,9 @@ nnoremap <C-f> <C-f>3<C-y> "  Make overlap 3 extra on control-f
 nnoremap <C-b> <C-b>3<C-e> "  Make overlap 3 extra on control-b
 
 " Yank text to the OS X clipboard
+" Which register to use for yanked text.
+" unnamed - use the operating system clipboard.
+set clipboard=unnamed
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 
@@ -272,3 +283,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_eslint_checker = 1
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_pug_checkers = ['jade']
+
+
+let g:airline_theme='bubblegum'

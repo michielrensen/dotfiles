@@ -28,9 +28,11 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist ssh-agent autojump git gulp history cp)
+plugins=(wd colorize compleat dirpersist ssh-agent autojump git gulp history cp)
 
 source $ZSH/oh-my-zsh.sh
+
+source ~/.zsh_aliases
 
 source /usr/local/opt/nvm/nvm.sh
 
