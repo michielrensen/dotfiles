@@ -218,6 +218,8 @@ done
 
 popd > /dev/null 2>&1
 
+bot "Installing vim plugins"
+vim +PluginInstall +qall > /dev/null 2>&1
 
 bot "installing fonts"
 ./fonts/install.sh
