@@ -2,8 +2,10 @@ module.exports = {
   brew: [
     'ack',
     'ag',
+    'awscli',
     // Install GNU core utilities (those that come with OS X are outdated)
     // Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+    'composer',
     'coreutils',
     'dos2unix',
     // Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
@@ -18,6 +20,7 @@ module.exports = {
     'gnu-sed --default-names',
     // better, more recent grep
     'homebrew/dupes/grep',
+    'hub',
     'imagemagick',
     'imagesnap',
     // jq is a sort of JSON grep
@@ -33,7 +36,7 @@ module.exports = {
     'tree',
     'ttyrec',
     // better, more recent vim
-    'require_brew vim --override-system-vi',
+    'require_brew macvim --override-system-vi',
     'watch',
     // Install wget with IRI support
     'wget --enable-iri'
@@ -45,13 +48,13 @@ module.exports = {
     'box-sync',
     //'comicbooklover',
     //'diffmerge',
-    //'dropbox',
+    'dropbox',
     //'evernote',
     'gpgtools',
     //'ireadfast',
     'iterm2',
     //'macvim',
-    'sizeup',
+    //'sizeup',
     //'sketchup',
     'slack',
     'the-unarchiver',
