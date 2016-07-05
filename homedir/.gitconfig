@@ -1,7 +1,7 @@
 [user]
   name = Michiel Rensen
   email = info@michielrensen.nl
-	singningkey = 153F0D98
+	signingkey = 153F0D98
 [github]
   # https://github.com/blog/180-local-github-config
   user = michielrensen
