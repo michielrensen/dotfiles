@@ -222,17 +222,17 @@ bot "Installing vim plugins"
 vim +PluginInstall +qall > /dev/null 2>&1
 
 bot "installing fonts"
+brew tap caskroom/fonts
+require_cask font-awesome-terminal-fonts
+require_cask font-fontawesome
+require_cask font-hack
+require_cask font-inconsolata-dz-for-powerline
+require_cask font-inconsolata-g-for-powerline
+require_cask font-inconsolata-for-powerline
+require_cask font-roboto-mono
+require_cask font-roboto-mono-for-powerline
+require_cask font-source-code-pro
 ./fonts/install.sh
-require_brew caskroom/fonts
-require_brew font-awesome
-require_brew font-awesome-terminal-fonts
-require_brew font-hack
-require_brew font-inconsolata-dz-for-powerline
-require_brew font-inconsolata-g-for-powerline
-require_brew font-inconsolata-for-powerline
-require_brew font-roboto-mono
-require_brew font-roboto-mono-for-powerline
-require_brew font-source-code-pro
 ok
 
 if [[ -d "/Library/Ruby/Gems/2.0.0" ]]; then

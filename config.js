@@ -45,7 +45,7 @@ module.exports = {
     //'adium',
     //'amazon-cloud-drive',
     //'atom',
-    'box-sync',
+    //'box-sync',
     //'comicbooklover',
     //'diffmerge',
     'dropbox',
@@ -64,7 +64,7 @@ module.exports = {
     'xquartz'
   ],
   gem: [
-    'git-up'
+    //'git-up'
   ],
   npm: [
     'antic',
