@@ -14,7 +14,7 @@ module.exports = {
     'gawk',
     // http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
     'gifsicle',
-    'gnupg',
+    'gnupg21',
     // Install GNU `sed`, overwriting the built-in `sed`
     // so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
     'gnu-sed --default-names',
@@ -29,6 +29,7 @@ module.exports = {
     'moreutils',
     'nmap',
     'openconnect',
+    'pinentry-mac'
     'reattach-to-user-namespace',
     // better/more recent version of screen
     'homebrew/dupes/screen',

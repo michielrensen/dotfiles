@@ -1,9 +1,14 @@
 [user]
   name = Michiel Rensen
   email = michiel.rensen@lightspeedhq.com
+	singningkey = 153F0D98
 [github]
   # https://github.com/blog/180-local-github-config
   user = michielrensen
+[gpg]
+  program = gpg2
+[commit]
+  gpgsign = true  
 [color]
 # ui = true is a superset of all the more specific color options
 #  as documented at http://book.git-scm.com/5_customizing_git.html
