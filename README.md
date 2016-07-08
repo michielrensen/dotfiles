@@ -1,19 +1,5 @@
 [![Beerpay](https://beerpay.io/atomantic/dotfiles/badge.svg?style=flat-square)](https://beerpay.io/atomantic/dotfiles)
 
-# 3.0.0 Upgrade Instructions!
-
-`3.0.0` brings huge changes. If you have made any modifications (and didn't make your own fork), you will want to backup your dotfiles prior to running `git-up` or `git pull` on `~/.dotfiles`.
-
-Do the following to upgrade your ~/.dotfiles safely:
-
-1. backup your dotfiles: `cp -R ~/.dotfiles ~/.dotfiles_old`
-2. `cd ~/.dotfiles`
-3. update dotfiles: `git-up` or `git pull`
-4. remove old submodule location: `rm -rf .vim` (now lives in `homedir/.vim`)
-5. inspect `install.sh` and `config.js` to make sure all the software you want is installed
-6. inspect `homedir/*` for any changes you want to port from `./dotfiles_old`
-7. run `install.sh` again
-
 # \\[._.]/ - Hi, I'm the OSX bot
 
 I will update your OSX machine with Better™ system defaults, preferences, software configuration and even auto-install some handy development tools and apps that my developer friends find helpful.
@@ -97,7 +83,6 @@ cd ~/.dotfiles;
 ./install.sh
 ```
 * When it finishes, open Iterm and press `Command + ,` to open preferences. Under Profiles > Colors, select "Load Presets" and choose the `Solarized Dark` scheme. If it isn't there for some reason, import it from `~/.dotfiles/configs`
-* run `vim` and then do `:PluginInstall` (you'll see errors loading plugins when vim opens until you do)
 
 > Note: running install.sh is idempotent. You can run it again and again as you add new features or software to the scripts! I'll regularly add new configurations so keep an eye on this repo as it grows and optimizes.
 
@@ -105,11 +90,24 @@ cd ~/.dotfiles;
 
 If you have existing dotfiles for configuring git, zsh, vim, etc, these will be backed-up into `~/.dotfiles_backup/$(date +"%Y.%m.%d.%H.%M.%S")` and replaced with the files from this project. You can restore your original dotfiles by using `./restore.sh $RESTOREDATE` where `$RESTOREDATE` is the date folder name you want to restore.
 
+# 3.0.0 Upgrade Instructions!
+
+`3.0.0` brings huge changes. If you have made any modifications (and didn't make your own fork), you will want to backup your dotfiles prior to running `git-up` or `git pull` on `~/.dotfiles`.
+
+Do the following to upgrade your ~/.dotfiles safely:
+
+1. backup your dotfiles: `cp -R ~/.dotfiles ~/.dotfiles_old`
+2. `cd ~/.dotfiles`
+3. update dotfiles: `git-up` or `git pull`
+4. remove old submodule location: `rm -rf .vim` (now lives in `homedir/.vim`)
+5. inspect `install.sh` and `config.js` to make sure all the software you want is installed
+6. inspect `homedir/*` for any changes you want to port from `./dotfiles_old`
+7. run `install.sh` again
+
 # Additional
 
 ## VIM as IDE
 I am moving away from using Atom and instead using vim as my IDE. I use Vundle to manage vim plugins (instead of pathogen). Vundle is better in many ways and is compatible with pathogen plugins. Additionally, vundle will manage and install it's own plugins so we don't have to use git submodules for all of them.
-To install plugins with vundle, pop open vim and run `:PluginInstall`
 
 ## Crontab
 You can `cron ~/.crontab` if you want to add my nightly cron software updates.
@@ -309,6 +307,7 @@ The following is the software that I have set as default:
 * moreutils
 * findutils
 * ack
+* ag
 * dos2unix
 * fortune
 * gawk
@@ -337,14 +336,11 @@ The following is the software that I have set as default:
 * iterm2
 * sizeup
 * xquartz
-* google-chrome
 
 ## NPM Global Modules
 
 * antic
 * buzzphrase
-* bower
-* bower-check-updates
 * esformatter
 * eslint
 * generator-dockerize
@@ -367,9 +363,9 @@ Please refer to the [Contributor Covenant](https://github.com/atomantic/dotfiles
 1. Loathing should be directed into pull requests that make it better. woot.
 2. Bugs with the setup should be put as GitHub issues.
 3. Mehs should be > /dev/null
-4. Praise should be directed to [@antic](http://twitter.com/antic) or [@matthewmccull](http://twitter.com/matthewmccull) or [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+4. Praise should be directed to ![@antic](https://img.shields.io/twitter/follow/antic.svg?style=social&label=Follow)
 
 
 # ¯\\_(ツ)_/¯ Warning / Liability
 > Warning:
-The creator of this repo is not responsible if your machine ends up in a state you are not happy with. If you are concerned, look at install.sh and osx.sh to review everything this script will do to your machine :)
+The creator of this repo is not responsible if your machine ends up in a state you are not happy with. If you are concerned, look at the code to review everything this will do to your machine :)
