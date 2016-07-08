@@ -30,7 +30,7 @@ module.exports = {
     'moreutils',
     'nmap',
     'openconnect',
-    'pinentry-mac'
+    'pinentry-mac',
     'reattach-to-user-namespace',
     // better/more recent version of screen
     'homebrew/dupes/screen',

@@ -1,14 +1,14 @@
 [user]
 	name = Michiel Rensen
 	email = michiel.rensen@lightspeedhq.com
-	signingkey = 153F0D98
+	signingkey = E29A031A
 [github]
   # https://github.com/blog/180-local-github-config
   user = michielrensen
 [gpg]
   program = gpg2
 [commit]
-  gpgsign = true  
+  gpgsign = true
 	template = /Users/michiel/.stCommitMsg
 [color]
 # ui = true is a superset of all the more specific color options
@@ -206,7 +206,7 @@
   required = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
