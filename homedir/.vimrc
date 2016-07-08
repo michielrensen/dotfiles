@@ -19,12 +19,12 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+" Navigation (IDE frame)
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-markdown'
@@ -33,6 +33,18 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sensible'
+Plugin 'justinmk/vim-sneak'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'dkprice/vim-easygrep'
+" visual undo list
+Plugin 'sjl/gundo.vim'
+" Plugin 'majutsushi/tagbar'
+" markdown preview: opens browser with live reload when vim opens .md
 Plugin 'suan/vim-instant-markdown'
 Plugin 'godlygeek/tabular'
 " language tools
@@ -41,6 +53,9 @@ Plugin 'millermedeiros/vim-esformatter'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ronny/birds-of-paradise.vim'
+" Plugin 'elzr/vim-json'
+" Plugin 'SirVer/ultisnips'
+"Plugin 'sheerun/vim-polyglot'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'node.js'
 Plugin 'SuperTab'
@@ -75,6 +90,10 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set UTF-8 encoding
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
 set history=1000 " How many lines of history to remember
 set cf " enable error files and error jumping
 " set clipboard+=unnamed " turns out I do like sharing windows clipboard
@@ -143,6 +162,8 @@ set softtabstop=4 " unify
 set shiftwidth=4 " unify
 set tabstop=4 " real tabs should be 4, but they will show with set list on
 set copyindent " but above all -- follow the conventions laid before us
+" wrap lines at 120 chars. 80 is somewhat antiquated with nowadays displays.
+set textwidth=120
 filetype plugin indent on " load filetype plugins and indent settings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -176,18 +197,14 @@ set foldopen-=undo " don't open folds when you undo stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd = 'ctags' " Location of ctags
-let Tlist_Sort_Type = "name" " order by
-let Tlist_Use_Right_Window = 1 " split to the right side of the screen
-let Tlist_Compact_Format = 1 " show small meny
-let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
-let Tlist_File_Fold_Auto_Close = 0 " Do not close tags for other files
-let Tlist_Enable_Fold_Column = 1 " Do show folding tree
-let Tlist_WinWidth = 50 " 50 cols wide, so I can (almost always) read my functions
-let tlist_php_settings = 'php;c:class;d:constant;f:function' " don't show variables in php
-let tlist_aspvbs_settings = 'asp;f:function;s:sub' " just functions and subs
-let tlist_aspjscript_settings = 'asp;f:function;c:class' " just functions and classes
-let tlist_vb_settings = 'asp;f:function;c:class' " just functions and classes
+"let Tlist_Ctags_Cmd = 'ctags' " Location of ctags
+"let Tlist_Sort_Type = "name" " order by
+"let Tlist_Use_Right_Window = 1 " split to the right side of the screen
+"let Tlist_Compact_Format = 1 " show small meny
+"let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
+"let Tlist_File_Fold_Auto_Close = 0 " Do not close tags for other files
+"let Tlist_Enable_Fold_Column = 1 " Do show folding tree
+"let Tlist_WinWidth = 50 " 50 cols wide, so I can (almost always) read my functions
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Matchit
@@ -270,7 +287,7 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic 
+" Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -283,6 +300,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_eslint_checker = 1
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_pug_checkers = ['jade']
-
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Other
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sneak#streak = 1
 let g:airline_theme='bubblegum'

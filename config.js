@@ -1,5 +1,6 @@
 module.exports = {
   brew: [
+    // http://conqueringthecommandline.com/book/ack_ag
     'ack',
     'ag',
     'awscli',
@@ -37,7 +38,7 @@ module.exports = {
     'tree',
     'ttyrec',
     // better, more recent vim
-    'require_brew macvim --override-system-vi',
+    'macvim --override-system-vi',
     'watch',
     // Install wget with IRI support
     'wget --enable-iri'
@@ -70,9 +71,6 @@ module.exports = {
   npm: [
     'antic',
     'buzzphrase',
-    'bower',
-    'bower-check-updates',
-    'esformatter',
     'eslint',
     'instant-markdown-d',
     'npm-check',
