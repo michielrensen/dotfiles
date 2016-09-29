@@ -485,6 +485,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;ok
 
 running "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1;
+defaults write NSGlobalDomain InitialKeyRepat -in 15;
 
 running "Set language and text formats (english/US)"
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -823,6 +824,8 @@ defaults write com.googlecode.iterm2 HotkeyChar -int 96;
 defaults write com.googlecode.iterm2 HotkeyCode -int 50;
 defaults write com.googlecode.iterm2 FocusFollowsMouse -int 1;
 defaults write com.googlecode.iterm2 HotkeyModifiers -int 262401;
+running "Make iTerm2 load new tabs in the same directory"
+/usr/libexec/PlistBuddy -c "set \"New Bookmarks\":0:\"Custom Directory\" Recycle" ~/Library/Preferences/com.googlecode.iterm2.plist
 running "setting fonts"
 defaults write com.googlecode.iterm2 "Normal Font" -string "Hack-Regular 12";
 defaults write com.googlecode.iterm2 "Non Ascii Font" -string "RobotoMonoForPowerline-Regular 12";
