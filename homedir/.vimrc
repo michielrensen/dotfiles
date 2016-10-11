@@ -126,6 +126,7 @@ set cmdheight=1 " the command bar is 1 high
 set number " turn on line numbers
 set numberwidth=5
 hi LineNr ctermbg=none
+hi CursorLine term=underline ctermbg=DarkGray guibg=#493a35
 set lz " do not redraw while running macros (much faster) (LazyRedraw)
 set hid " you can change buffer without saving
 set backspace=2 " make backspace work normal
@@ -178,7 +179,6 @@ set completeopt=menu,longest,preview " improve the way autocomplete works
 " set cursorcolumn " show the current column
 set nocursorcolumn
 set cursorline
-hi CursorLine term=underline ctermbg=008 guibg=#493a35
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "    Enable folding, but by default make it act like folding is

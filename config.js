@@ -38,10 +38,11 @@ module.exports = {
     'tree',
     'ttyrec',
     // better, more recent vim
-    'macvim --override-system-vi',
+    // 'macvim --override-system-vi',
     'watch',
     // Install wget with IRI support
-    'wget --enable-iri'
+    'wget --enable-iri',
+    'm-cli'
   ],
   cask: [
     //'adium',
