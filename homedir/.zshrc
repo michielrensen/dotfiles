@@ -29,7 +29,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(wd colorize compleat dirpersist ssh-agent autojump git gulp history cp)
+plugins=(wd composer colorize compleat dirpersist ssh-agent autojump git gulp history cp zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,4 +65,3 @@ unsetopt correct
 # run fortune on new terminal :)
 fortune
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
