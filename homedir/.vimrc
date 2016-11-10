@@ -24,6 +24,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'wincent/terminus'
 " Navigation (IDE frame)
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
@@ -74,7 +75,7 @@ colorscheme birds-of-paradise
 syntax enable
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -93,7 +94,7 @@ set fenc=utf-8
 set termencoding=utf-8
 set history=1000 " How many lines of history to remember
 set cf " enable error files and error jumping
-" set clipboard+=unnamed " turns out I do like sharing windows clipboard
+set clipboard+=unnamed " turns out I do like sharing windows clipboard
 set ffs=unix,dos,mac " support all three, in this order
 set viminfo+=! " make sure it can save viminfo
 set isk+=_,$,@,%,# " none of these should be word dividers, so make them not be
@@ -137,6 +138,7 @@ set report=0 " tell us when anything is changed via :...
 set noerrorbells " don't make noise
 set list " we do what to show tabs, to ensure we get them out of my files
 set listchars=tab:>-,trail:- " show tabs and trailing whitespace
+set termguicolors
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Cues
@@ -298,6 +300,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_eslint_checker = 1
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_pug_checkers = ['jade']
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCmpleteMe 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
