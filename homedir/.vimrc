@@ -180,7 +180,8 @@ set smartcase " if there are caps, go case-sensitive
 set completeopt=menu,longest,preview " improve the way autocomplete works
 " set cursorcolumn " show the current column
 set nocursorcolumn
-set cursorline
+" set cursorline
+set lazyredraw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "    Enable folding, but by default make it act like folding is
