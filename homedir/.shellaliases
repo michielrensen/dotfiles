@@ -23,7 +23,6 @@ alias to.devapps='cd ${MYDEVAPPS}'
 # Simple Program Name Shortening
 alias g=git
 
-
 #############################
 # Utilities
 

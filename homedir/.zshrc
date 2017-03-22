@@ -37,6 +37,11 @@ source ~/.zsh_aliases
 
 source /usr/local/opt/nvm/nvm.sh
 
+# rbenv
+eval "$(rbenv init -)"
+
+export KNIFE_HOME=/Users/michiel.rensen/src/chef/chef-kitchens/kitchen-camel
+
 # In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env
 # variable pointing GPG to the gpg-agent socket. This little script, which must be sourced
 # in your shell's init script (ie, .bash_profile, .zshrc, whatever), will either start
@@ -65,3 +70,9 @@ unsetopt correct
 # run fortune on new terminal :)
 fortune
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc'; fi
