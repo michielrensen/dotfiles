@@ -34,7 +34,6 @@ plugins=(wd composer colorize compleat dirpersist ssh-agent autojump git gulp hi
 source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh_aliases
-
 source /usr/local/opt/nvm/nvm.sh
 
 # rbenv
@@ -71,8 +70,10 @@ unsetopt correct
 fortune
 
 
+source <(kubectl completion zsh)
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/michiel.rensen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/michiel.rensen/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/google-cloud-sdk/completion.zsh.inc'; fi
