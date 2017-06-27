@@ -29,7 +29,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(wd composer colorize compleat dirpersist ssh-agent autojump git gulp history cp zsh-autosuggestions)
+plugins=(aws composer colorize dirpersist docker gitfast history knife lol wd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,9 +70,9 @@ unsetopt correct
 fortune
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/michiel.rensen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/michiel.rensen/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc'; fi
 
 source <(kubectl completion zsh)
