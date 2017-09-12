@@ -190,8 +190,8 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
+if [[ ! -d "./.zim/modules/prompt/external-themes/powerlevel9k" ]]; then
+  git clone https://github.com/bhilburn/powerlevel9k.git .zim/modules/prompt/external-themes/powerlevel9k
 fi
 
 bot "creating symlinks for project dotfiles..."
