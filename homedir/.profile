@@ -8,3 +8,5 @@ source ~/.shellpaths
 source ~/.shellaliases
 # Private/Proprietary shell aliases (not to be checked into the public repo) :)
 #source ~/Dropbox/Private/Boxes/osx/.shellaliases
+
+export PATH="$HOME/.cargo/bin:$PATH"

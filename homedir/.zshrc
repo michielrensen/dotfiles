@@ -4,10 +4,11 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 # POWERLEVEL9K_MODE='awesome-patched'
 export ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_MODE='nerdfont-complete'
 # https://github.com/bhilburn/powerlevel9k#customizing-prompt-segments
 # https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir nvm vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir nvm rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 # colorcode test
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 POWERLEVEL9K_NVM_FOREGROUND='000'
@@ -25,11 +26,10 @@ export CASE_SENSITIVE="true"
 # export DISABLE_LS_COLORS="true"
 
 # disable autosetting terminal title.
-export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(aws composer colorize dirpersist docker gitfast history knife lol wd zsh-autosuggestions)
+plugins=(git history wd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,13 +66,6 @@ function chpwd() {
 # Customize to your needs...
 unsetopt correct
 
-# run fortune on new terminal :)
-fortune
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michiel.rensen/src/google-cloud-sdk/completion.zsh.inc'; fi
-
 source <(kubectl completion zsh)
+
+fortune
