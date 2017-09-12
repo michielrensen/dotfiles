@@ -1,8 +1,23 @@
+
+
+#
+# User configuration sourced by interactive shells
+#
+
+# Change default zim location 
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+# Source zim
+if [[ -s ${ZIM_HOME}/init.zsh ]]; then
+  source ${ZIM_HOME}/init.zsh
+fi
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 # if you want to use this, change your non-ascii font to Droid Sans Mono for Awesome
 # POWERLEVEL9K_MODE='awesome-patched'
 export ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_INSTALLATION_PATH=~/.zim/modules/prompt/external-themes/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_MODE='nerdfont-complete'
 # https://github.com/bhilburn/powerlevel9k#customizing-prompt-segments
@@ -30,8 +45,6 @@ export CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history wd zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh_aliases
 source /usr/local/opt/nvm/nvm.sh
@@ -67,5 +80,3 @@ function chpwd() {
 unsetopt correct
 
 source <(kubectl completion zsh)
-
-fortune
