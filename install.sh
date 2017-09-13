@@ -190,10 +190,6 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-if [[ ! -d "./.zim/modules/prompt/external-themes/powerlevel9k" ]]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git .zim/modules/prompt/external-themes/powerlevel9k
-fi
-
 bot "creating symlinks for project dotfiles..."
 pushd homedir > /dev/null 2>&1
 now=$(date +"%Y.%m.%d.%H.%M.%S")
@@ -217,6 +213,10 @@ for file in .*; do
 done
 
 popd > /dev/null 2>&1
+
+if [[ ! -d "./.zim/modules/prompt/external-themes/powerlevel9k" ]]; then
+  git clone https://github.com/bhilburn/powerlevel9k.git .zim/modules/prompt/external-themes/powerlevel9k
+fi
 
 bot "Installing vim plugins"
 vim +PluginInstall +qall > /dev/null 2>&1

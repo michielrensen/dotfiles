@@ -46,8 +46,8 @@ export CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history wd zsh-autosuggestions)
 
-source ~/.zsh_aliases
 source /usr/local/opt/nvm/nvm.sh
+source ~/.profile
 
 # rbenv
 eval "$(rbenv init -)"

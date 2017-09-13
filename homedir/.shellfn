@@ -119,6 +119,35 @@ function curlhammer () {
   bot "done"
 }
 
-function dockershell () {
-  bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+# watch relevant information on a specific namespace
+function k8watch() {
+ watch -n 5 "kubectl -n $1 get pods;echo '';kubectl -n $1 get services;echo '';kubectl -n $1 get ingress;echo '';kubectl -n $1 get deployments"
+}
+
+# execute a shell on the first pod matching $2 in namespace $1, use $3 for specific container
+# usage: k8exec <namespace> <podname matching pattern> [<container>]
+#        k8exec vault-consul-stack "^vault.*0ds" vault
+function k8exec(){
+ pod=`kubectl -n $1 get pods | egrep "${2}" | head -n 1 | awk '{ print $1 }'`
+ if [ -z $3 ]; then
+   kubectl -n $1 exec $pod -i -t -- /bin/sh
+ else
+   kubectl -n $1 exec $pod -c $3 -i -t -- /bin/sh
+ fi
+}
+
+function k8logs(){
+ pod=`kubectl -n $1 get pods | egrep "${2}" | head -n 1 | awk '{ print $1 }'`
+ if [ -z $3 ]; then
+   kubectl -n $1 logs -f $pod
+ else
+   kubectl -n $1 logs -f $pod -c $3
+ fi
+}
+
+function docker-nuke(){
+  docker ps -a -q | xargs -r docker rm -f;
+  docker images -q | xargs -r docker rmi -f;
+  docker volume ls -q | xargs -r docker volume rm;
+  docker network ls -q -f type=custom | xargs -r docker network rm;
 }
