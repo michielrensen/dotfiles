@@ -79,7 +79,7 @@ function require_apm() {
 
 function sourceNVM(){
     export NVM_DIR=~/.nvm
-    source $(brew --prefix nvm)/nvm.sh
+    source $(brew --prefix nvm)/nvm.sh --no-use
 }
 
 
