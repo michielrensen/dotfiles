@@ -12,7 +12,7 @@
 # The second line of modules may depend on options set by modules in the first
 # line. These dependencies are noted on the respective module's README.md.
 zmodules=(autosuggestions directory environment git git-info history input utility meta custom \
-          syntax-highlighting ssh history-substring-search prompt completion)
+       syntax-highlighting ssh history-substring-search prompt completion)
 
 
 ###################
@@ -40,7 +40,7 @@ zprompt_theme='powerlevel9k'
 
 # Uncomment to enable command correction prompts
 # See: http://zsh.sourceforge.net/Doc/Release/Options.html#Input_002fOutput
-setopt CORRECT
+#setopt CORRECT
 
 #
 # Environment

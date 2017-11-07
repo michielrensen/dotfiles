@@ -42,8 +42,6 @@ source ~/.profile
 # rbenv
 eval "$(rbenv init -)"
 
-export KNIFE_HOME=/Users/michiel.rensen/src/chef/chef-kitchens/kitchen-camel
-
 # In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env
 # variable pointing GPG to the gpg-agent socket. This little script, which must be sourced
 # in your shell's init script (ie, .bash_profile, .zshrc, whatever), will either start
@@ -67,6 +65,4 @@ function chpwd() {
 [[ -f .nvmrc ]] && nvm use `cat .nvmrc`
 
 # Customize to your needs...
-unsetopt correct
-
-source <(kubectl completion zsh)
+#unsetopt correct
