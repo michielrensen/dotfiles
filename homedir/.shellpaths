@@ -17,3 +17,12 @@ source "/Users/$(whoami)/src/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables shell command completion for gcloud.
 source "/Users/$(whoami)/src/google-cloud-sdk/completion.zsh.inc"
+
+# Chef
+export KNIFE_HOME=/Users/michiel.rensen/src/chef/chef-kitchens/kitchen-camel
+
+# Python
+export PATH=$PATH:~/.local/bin
+
+# Rust
+source $HOME/.cargo/env

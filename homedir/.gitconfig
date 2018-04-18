@@ -6,9 +6,9 @@
   # https://github.com/blog/180-local-github-config
   user = michielrensen
 [gpg]
-	program = gpg2
+	program = /usr/local/bin/krgpg
 [commit]
-  gpgsign = true
+	gpgSign = true
 [color]
 # ui = true is a superset of all the more specific color options
 #  as documented at http://book.git-scm.com/5_customizing_git.html
@@ -210,3 +210,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[tag]
+	forceSignAnnotated = true
