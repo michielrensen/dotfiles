@@ -18,8 +18,8 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
 POWERLEVEL9K_MODE='nerdfont-complete'
 # https://github.com/bhilburn/powerlevel9k#customizing-prompt-segments
 # https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir nvm rbenv aws vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir aws vcs dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status kubecontext time)
 POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M}"
 # colorcode test
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
@@ -72,3 +72,6 @@ function chpwd() {
 
 # Added by Krypton
 export GPG_TTY=$(tty)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
