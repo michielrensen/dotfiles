@@ -1,6 +1,6 @@
 [user]
-  name = Michiel Rensen
-  email = michiel.rensen@lightspeedhq.com
+	name = Michiel Rensen
+	email = michiel.rensen@lightspeedhq.com
   signingkey = 9FE36852 
 [github]
   # https://github.com/blog/180-local-github-config
@@ -174,7 +174,7 @@
   keepBackup = false
 
 [merge]
-  tool = vimdiff
+	tool = vimdiff
   # Always show a diffstat at the end of a merge
   stat = true
   conflictstyle = diff3
@@ -200,9 +200,10 @@
   smudge = git media smudge %f
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

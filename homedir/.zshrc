@@ -36,7 +36,7 @@ export CASE_SENSITIVE="true"
 # disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
-source /usr/local/opt/nvm/nvm.sh --no-use
+source ~/.nvm/nvm.sh --no-use
 source ~/.profile
 
 # rbenv
@@ -51,11 +51,8 @@ eval "$(pyenv init -)"
 # gpg-agent or set up the GPG_AGENT_INFO variable if it's already running.
 
 # Add the following to your shell init to set up gpg-agent automatically for every shell
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    gpg-agent --homedir /Users/michiel.rensen/.gnupg --use-standard-socket --daemon
+if ! pgrep gpg-agent > /dev/null 2>&1; then
+    gpg-agent --homedir /Users/michiel.rensen/.gnupg --daemon
 fi
 
 # load .nvmrc

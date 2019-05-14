@@ -89,14 +89,14 @@ alias port-forward-list="sudo pfctl -s nat"
 alias vtop="vtop --theme wizard"
 
 alias server2='ssh server2.michielrensen.nl'
-alias keizer='ssh keizer.webshopapp.net'
 alias v='vagrant'
 alias c='composer'
 alias d='docker'
+alias k='kubectl'
 alias refresh-pi='~/src/refresh-pi.sh'
 alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias be="bundle exec"
 alias db="bundle exec knife secure bag"
 alias lco="bundle exec knife lco"
-
+alias lsmake='GOOGLE_APPLICATION_CREDENTIALS="/Users/michiel.rensen/.config/gcloud/application_default_credentials.json" make'

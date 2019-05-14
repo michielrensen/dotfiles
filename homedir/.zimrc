@@ -47,7 +47,7 @@ zprompt_theme='powerlevel9k'
 #
 
 # Set the string below to the desired terminal title format string.
-# The terminal title is redrawn upon directory change, however, variables like 
+# The terminal title is redrawn upon directory change, however, variables like
 # ${PWD} are only evaluated once. Use prompt expansion strings for dynamic data:
 #   http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
 # The example below uses the following format: 'username@host:/current/directory'
@@ -78,7 +78,7 @@ zhighlighters=(main brackets)
 #
 
 # Load these ssh identities with the ssh module
-zssh_ids=(id_rsa lightspeed_rsa lightspeed_eu_rsa github_rsa)
+#zssh_ids=(id_rsa lightspeed_rsa lightspeed_eu_rsa github_rsa)
 
 
 #
