@@ -98,5 +98,15 @@ alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias be="bundle exec"
 alias db="bundle exec knife secure bag"
-alias lco="bundle exec knife lco"
+alias lco="~/src/ecom-devtools/lco-tools/lco-list"
+alias lco-ssh="~/src/ecom-devtools/lco-tools/lco-ssh"
 alias lsmake='GOOGLE_APPLICATION_CREDENTIALS="/Users/michiel.rensen/.config/gcloud/application_default_credentials.json" make'
+
+# VAULT
+alias vault-dev="VAULT_ADDR=https://vault.lightspeedappdev.com vault login -method=github"
+alias vault-stg="VAULT_ADDR=https://vault.lightspeedappstg.com vault login -method=github"
+alias vault-prd="VAULT_ADDR=https://vault.lightspeedapp.com vault login -method=github"
+
+# Ansible
+alias ap="ansible-playbook"
+alias ai="ansible-inventory"
