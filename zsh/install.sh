@@ -1,4 +1,5 @@
 #!/bin/sh
 #
 # Antigen
-curl -L git.io/antigen > /usr/local/share/antigen/antigen.zsh
+mkdir -p /opt/antigen
+curl -L git.io/antigen > /opt/antigen/antigen.zsh
