@@ -1,5 +1,5 @@
 
-echo "> setting macOS defaults"
+echo "› setting macOS defaults"
 
 osascript -e 'tell application "System Preferences" to quit'
 
