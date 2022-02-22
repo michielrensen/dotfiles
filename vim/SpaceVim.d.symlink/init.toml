@@ -1,0 +1,6 @@
+[[custom_plugins]]
+  name = "ronny/birds-of-paradise.vim"
+  merged = 0
+
+[options]
+  bootstrap_before = "myspacevim#before"
