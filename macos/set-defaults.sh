@@ -1,3 +1,8 @@
+
+echo "> setting macOS defaults"
+
+osascript -e 'tell application "System Preferences" to quit'
+
 # Sets reasonable macOS defaults.
 #
 # Or, in other words, set shit how I like in macOS.
@@ -20,6 +25,7 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
@@ -27,5 +33,27 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-corner -int 4
+defaults write com.apple.dock wvous-br-corner -int 14
+defaults write com.apple.dock wvous-tl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
+
+# for app in "Activity Monitor" \
+# 	"Address Book" \
+# 	"Calendar" \
+# 	"cfprefsd" \
+# 	"Contacts" \
+# 	"Dock" \
+# 	"Finder" \
+# 	"Messages" \
+# 	"Photos" \
+# 	"Safari" \
+# 	"SystemUIServer" \
+# 	"iCal"; do
+# 	killall "${app}" &> /dev/null
+# done
+echo "Done. Note that some of these changes require a logout/restart to take effect."
