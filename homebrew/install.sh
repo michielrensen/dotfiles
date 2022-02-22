@@ -68,7 +68,7 @@ keybase \
 sequel-ace \
 slack \
 stats \
-vscode \
+visual-studio-code \
 zoom
 
 exit 0
