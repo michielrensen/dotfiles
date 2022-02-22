@@ -16,9 +16,58 @@ then
 fi
 
 # Install sane brew packages
-brew install ansible ansible-lint antigen argocd awscli bat circleci shopify/shopify/ejson gh git-crypt helm heroku-node htop hub istioctl jq k9s kns kubectx mkcert molecule nmap packer php@7.4 rbenv rbenv-chefdk rsync ruby ruby-build shellcheck telnet terraform tmate vault vim wget
+brew install \
+ansible \
+ansible-lint \
+antigen \
+argocd \
+awscli \
+bat \
+circleci \
+shopify/shopify/ejson \
+gh \
+git-crypt \
+helm \
+htop \
+hub \
+istioctl \
+jq \
+k9s \
+mkcert \
+molecule \
+nmap \
+packer \
+php@7.4 \
+rbenv \
+rbenv-chefdk \
+rsync \
+ruby \
+ruby-build \
+shellcheck \
+telnet \
+terraform \
+tmate \
+vault \
+vim \
+wget
 
 # Install sane brew cask packages
-brew install --cask 1password brave-browser docker dropbox font-hack font-hack-nerd-font font-meslo-for-powerline font-meslo-lg-dz font-meslo-lg-nerd-font gdisk google-cloud-sdk gpg-suite iterm2 keybase sequel-ace slack stats vagrant virtualbox zoom
+brew tap homebrew/cask-fonts 
+brew install --cask \
+1password \
+brave-browser \
+docker \
+dropbox \
+font-meslo-for-powerline \
+font-meslo-lg-dz \
+font-meslo-lg-nerd-font \
+google-cloud-sdk \
+gpg-suite \
+iterm2 \
+keybase \
+sequel-ace \
+slack \
+stats \
+zoom
 
 exit 0
