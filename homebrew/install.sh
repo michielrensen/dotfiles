@@ -15,62 +15,7 @@ then
 
 fi
 
-# Install sane brew packages
-brew install \
-ansible \
-ansible-lint \
-antigen \
-argocd \
-awscli \
-bat \
-circleci \
-shopify/shopify/ejson \
-gh \
-git-crypt \
-helm \
-htop \
-hub \
-istioctl \
-jq \
-k9s \
-mkcert \
-molecule \
-nmap \
-packer \
-php@7.4 \
-rbenv \
-rbenv-chefdk \
-rsync \
-ruby \
-ruby-build \
-shellcheck \
-telnet \
-terraform \
-tmate \
-vault \
-vim \
-wget
-
-# Install sane brew cask packages
-brew tap homebrew/cask-fonts 
-brew install --cask \
-1password \
-brave-browser \
-docker \
-dropbox \
-font-meslo-for-powerline \
-font-meslo-lg-dz \
-font-meslo-lg-nerd-font \
-google-cloud-sdk \
-gpg-suite \
-iterm2 \
-keybase \
-rectangle \
-sequel-ace \
-slack \
-spark \
-stats \
-visual-studio-code \
-zoom
+# Install brew packages using Brewfile
+brew bundle --file ./homebrew/Brewfile
 
 exit 0
