@@ -65,6 +65,7 @@ google-cloud-sdk \
 gpg-suite \
 iterm2 \
 keybase \
+rectangle \
 sequel-ace \
 slack \
 stats \
