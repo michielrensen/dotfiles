@@ -11,7 +11,7 @@
         "revision": "f5619209ce92260bf07780b5b8eac38bb6ea5dd4"
       },
       "homebrew/core": {
-        "revision": "4bacdb85b4bcdc13eae130f571dc8a419785ec72"
+        "revision": "0ea5da646bed10643473f88367df3cbf7e70077b"
       },
       "shopify/shopify": {
         "revision": "eb246c3c2d3ad346fda0de5e93687243258ef114"
@@ -1444,6 +1444,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "aerial": {
+        "version": "3.0.6",
+        "options": {
+          "full_name": "aerial"
+        }
       }
     },
     "mas": {
@@ -1478,7 +1484,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.16",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "4bacdb85b4bcdc13eae130f571dc8a419785ec72",
+        "Homebrew/homebrew-core": "0ea5da646bed10643473f88367df3cbf7e70077b",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.2.1",
         "macOS": "12.2.1"
