@@ -1,0 +1,41 @@
+#My Scripts
+export PATH=$PATH:.
+#export PATH=$PATH:~/.dotfiles/scripts
+
+#Brew
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# GO
+export PATH=$PATH:/usr/local/bin/bin
+
+# PHP
+export PATH=$PATH:~/.composer/vendor/bin
+
+# The next line updates PATH for the Google Cloud SDK.
+source "/Users/$(whoami)/src/google-cloud-sdk/path.zsh.inc"
+
+# The next line enables shell command completion for gcloud.
+source "/Users/$(whoami)/src/google-cloud-sdk/completion.zsh.inc"
+
+# Kubectl completion
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+
+# Chef
+export KNIFE_HOME=/Users/michiel.rensen/src/chef/chef-kitchens/kitchen-camel
+
+# Python
+export PATH=$PATH:~/.local/bin
+
+# PHP
+#export PATH="/usr/local/opt/php@5.6/bin:$PATH"
+#export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
+#export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+#export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+#export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+#export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
+# GO
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"

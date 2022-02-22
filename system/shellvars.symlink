@@ -1,0 +1,26 @@
+# Set vim as default editor (vi is the default otherwise)
+export EDITOR="vim"
+
+#########################################################################
+# Tool paths
+#########################################################################
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export ZSH_CUSTOM=~/.zsh
+export AWS_DEFAULT_PROFILE=cml-use1stag
+
+#########################################################################
+# Tool settings
+#########################################################################
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+
+# Vault
+source ~/.config/vault/vars
+
+# Chef
+
+# Google
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/michiel.rensen/.config/gcloud/application_default_credentials.json
+
+export LC_ALL=en_US.UTF-8
+
