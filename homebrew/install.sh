@@ -68,6 +68,7 @@ keybase \
 rectangle \
 sequel-ace \
 slack \
+spark \
 stats \
 visual-studio-code \
 zoom
