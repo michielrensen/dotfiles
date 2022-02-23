@@ -23,6 +23,7 @@ export KNIFE_HOME=/Users/michiel.rensen/src/chef/chef-kitchens/kitchen-camel
 
 # Python
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/Library/Python/2.7/bin
 
 # PHP
 #export PATH="/usr/local/opt/php@5.6/bin:$PATH"
