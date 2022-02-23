@@ -5,16 +5,19 @@
         "revision": "3b7cba3e1c32e5908f8f688033bd614195c020d7"
       },
       "homebrew/cask": {
-        "revision": "5479f21bc81ee364743030e2fd7cb4a0df522c0c"
+        "revision": "ae9ace3b1b6624a421c22c8135da4c002a686de8"
       },
       "homebrew/cask-fonts": {
         "revision": "c32a921fa6c2bca04690fa6e36101ddb0cbdbfd6"
       },
       "homebrew/core": {
-        "revision": "c96bdde1b5ec0c1291d7199f4cee80a44e8e1d6a"
+        "revision": "6a390a6b2e07af72c07f58ea0c59668a6ed51051"
       },
       "shopify/shopify": {
-        "revision": "eb246c3c2d3ad346fda0de5e93687243258ef114"
+        "revision": "6e09f96ad4ef3101e4ef9bacd5ee6099c9ea64b4"
+      },
+      "blendle/blendle": {
+        "revision": "3a868e95ed77025c927cef974c057833b3d5523f"
       }
     },
     "brew": {
@@ -1367,6 +1370,10 @@
             }
           }
         }
+      },
+      "blendle/blendle/kns": {
+        "version": "7e5f78b781c6567f71068585f2b101caca99f0ef",
+        "bottle": false
       }
     },
     "cask": {
@@ -1529,7 +1536,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.16",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "c96bdde1b5ec0c1291d7199f4cee80a44e8e1d6a",
+        "Homebrew/homebrew-core": "6a390a6b2e07af72c07f58ea0c59668a6ed51051",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.2.1",
         "macOS": "12.2.1"
