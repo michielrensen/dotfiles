@@ -19,7 +19,7 @@ antigen bundle brew
 antigen bundle git
 antigen bundle kubectl
 antigen bundle macos
-antigen bundle rbenv
+antigen bundle terraform
 
 # External plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
