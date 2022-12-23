@@ -161,3 +161,46 @@ function git-root {
   # vim:et sts=2 sw=2 ft=zsh
   command git rev-parse --show-toplevel
 }
+
+# Vault
+vault-dev() {
+  VAULT_TOKEN_FILE="$HOME/.vault-token-dev"
+  export VAULT_ADDR="https://vault.lightspeedsbx.app";
+  export VAULT_TOKEN=$(vault login -token-only "$(cat $VAULT_TOKEN_FILE 2>/dev/null)" || vault login -token-only -method=oidc)
+  printf "%s" "$VAULT_TOKEN" >"$VAULT_TOKEN_FILE" && chmod 600 "$VAULT_TOKEN_FILE"
+}
+
+vault-stg() {
+  VAULT_TOKEN_FILE="$HOME/.vault-token-stg"
+  export VAULT_ADDR="https://vault.lightspeedstg.app";
+  export VAULT_TOKEN=$(vault login -token-only "$(cat $VAULT_TOKEN_FILE 2>/dev/null)" || vault login -token-only -method=oidc)
+  printf "%s" "$VAULT_TOKEN" >"$VAULT_TOKEN_FILE" && chmod 600 "$VAULT_TOKEN_FILE"
+}
+
+vault-prd() {
+  VAULT_TOKEN_FILE="$HOME/.vault-token-prd"
+  export VAULT_ADDR="https://vault.lightspeed.app";
+  export VAULT_TOKEN=$(vault login -token-only "$(cat $VAULT_TOKEN_FILE 2>/dev/null)" || vault login -token-only -method=oidc)
+  printf "%s" "$VAULT_TOKEN" >"$VAULT_TOKEN_FILE" && chmod 600 "$VAULT_TOKEN_FILE"
+}
+
+# EKS
+eks-list() {
+  [[ $# -ne 2 ]] && echo "usage: eks-list account region" && return 1
+  aws eks list-clusters \
+    --profile lspay-"$1" \
+    --region "$2"
+}
+
+eks-conf() {
+  [[ $# -ne 1 ]] && echo "usage: eks-conf cluster" && return 1
+  ACCOUNT=$(echo "$1" | cut -d- -f2 | sed 's/tooling/prod/')
+  REGION=$(echo "$1" | cut -d- -f3-5)
+  CONTEXT=$(aws eks update-kubeconfig \
+    --profile lspay-"$ACCOUNT" \
+    --region "$REGION" \
+    --name "$1" |
+    awk -F'context' '{print $2}' |
+    awk '{print $1}')
+  kubectl config rename-context "$CONTEXT" "$ACCOUNT-$REGION"
+}

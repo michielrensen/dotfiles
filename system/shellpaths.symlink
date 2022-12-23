@@ -3,8 +3,8 @@ export PATH=$PATH:.
 #export PATH=$PATH:~/.dotfiles/scripts
 
 #Brew
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/bin:$PATH
+#export PATH=/usr/local/sbin:$PATH
+#export PATH=/usr/local/bin:$PATH
 
 # GO
 export PATH=$PATH:/usr/local/bin/bin
@@ -37,3 +37,8 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 
 # GO
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

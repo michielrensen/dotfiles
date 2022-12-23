@@ -53,9 +53,9 @@ alias lco-ssh="~/src/ecom-devtools/lco-tools/lco-ssh"
 alias lsmake='GOOGLE_APPLICATION_CREDENTIALS="/Users/michiel.rensen/.config/gcloud/application_default_credentials.json" make'
 
 # VAULT
-alias vault-dev="export VAULT_ADDR=https://vault.lightspeedappdev.com && vault login -method=github"
-alias vault-stg="export VAULT_ADDR=https://vault.lightspeedappstg.com && vault login -method=github"
-alias vault-prd="export VAULT_ADDR=https://vault.lightspeedapp.com && vault login -method=github"
+alias old-vault-dev="export VAULT_ADDR=https://vault.lightspeedappdev.com && vault login -method=github"
+alias old-vault-stg="export VAULT_ADDR=https://vault.lightspeedappstg.com && vault login -method=github"
+alias old-vault-prd="export VAULT_ADDR=https://vault.lightspeedapp.com && vault login -method=github"
 
 # Ansible
 alias ap="ansible-playbook"
@@ -68,9 +68,12 @@ alias atlas_sg="/Users/michiel.rensen/src/atlas-scripts/aws/atlas_asg"
 alias jg="jinn gaia"
 alias jga="jinn gaia apply"
 alias jgp="jinn gaia plan"
-alias jgisbx="vault-dev && jinn gaia init sbx"
-alias jgistg="vault-stg && jinn gaia init stg"
-alias jgiprd="vault-prd && jinn gaia init prd"
+alias jginsbx="vault-sbx && jinn gaia init sbx"
+alias jginstg="vault-stg && jinn gaia init stg"
+alias jginprd="vault-prd && jinn gaia init prd"
+alias jgisbx="old-vault-dev && jinn gaia init sbx"
+alias jgistg="old-vault-stg && jinn gaia init stg"
+alias jgiprd="old-vault-prd && jinn gaia init prd"
 alias jgwl="jinn gaia workspace list"
 alias jgws="jinn gaia workspace select"
 
@@ -257,3 +260,4 @@ alias jgws="jinn gaia workspace select"
   # Misc
   alias ${gprefix}..='cd "$(git-root || print .)"'
   alias ${gprefix}\?='git-alias-lookup'
+  alias assume="source assume"

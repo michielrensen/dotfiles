@@ -21,6 +21,9 @@ source ~/.config/vault/vars
 
 # Google
 export GOOGLE_APPLICATION_CREDENTIALS=/Users/michiel.rensen/.config/gcloud/application_default_credentials.json
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export LC_ALL=en_US.UTF-8
+
+export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 
