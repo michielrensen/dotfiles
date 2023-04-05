@@ -68,7 +68,7 @@ alias atlas_sg="/Users/michiel.rensen/src/atlas-scripts/aws/atlas_asg"
 alias jg="jinn gaia"
 alias jga="jinn gaia apply"
 alias jgp="jinn gaia plan"
-alias jginsbx="vault-sbx && jinn gaia init sbx"
+alias jginsbx="vault-dev && jinn gaia init sbx"
 alias jginstg="vault-stg && jinn gaia init stg"
 alias jginprd="vault-prd && jinn gaia init prd"
 alias jgisbx="old-vault-dev && jinn gaia init sbx"
@@ -140,7 +140,6 @@ alias jgws="jinn gaia workspace select"
   alias ${gprefix}fm='git pull'
   alias ${gprefix}fr='git pull --rebase'
   alias ${gprefix}fu='git fetch --all --prune && git merge --ff-only @\{u\}'
-  alias ${gprefix}fp='git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 
   # Grep (g)
   alias ${gprefix}g='git grep'

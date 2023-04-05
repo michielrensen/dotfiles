@@ -152,6 +152,7 @@ function docker-nuke(){
   docker network ls -q -f type=custom | xargs -r docker network rm;
 }
 
+# GIT
 function git-branch-current {
   # vim:et sts=2 sw=2 ft=zsh
   command git symbolic-ref -q --short HEAD
@@ -160,6 +161,15 @@ function git-branch-current {
 function git-root {
   # vim:et sts=2 sw=2 ft=zsh
   command git rev-parse --show-toplevel
+}
+
+function gfp() {
+  MAIN=${1:-master}; 
+  git checkout -q ${MAIN} && git for-each-ref refs/heads/ "--format=%(refname:short)" | \
+    while read branch; do mergeBase=$(git merge-base ${MAIN} $branch) && \
+      [[ $(git cherry ${MAIN} $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && \
+      git branch -D $branch; 
+    done
 }
 
 # Vault
