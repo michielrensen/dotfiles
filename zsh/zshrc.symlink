@@ -39,3 +39,4 @@ fi
 export GPG_TTY=$(tty)
 
 source ~/.profile
+autoload -U compinit && compinit

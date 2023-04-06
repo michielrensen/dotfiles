@@ -7,7 +7,6 @@ export EDITOR="vim"
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export ZSH_CUSTOM=~/.zsh
-export AWS_DEFAULT_PROFILE=cml-use1stag
 
 #########################################################################
 # Tool settings
@@ -27,3 +26,10 @@ export LC_ALL=en_US.UTF-8
 
 export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 
+# 1Password
+source /Users/michiel.rensen/.config/op/plugins.sh
+
+#Kubec (https://github.com/aabouzaid/kubech)h
+source ~/.kubech/kubech
+#source $HOME/.kubech/completion/kubechn.zsh
+#source $HOME/.kubech/completion/kubechc.zsh
