@@ -13,7 +13,8 @@ export PATH=$PATH:/usr/local/bin/bin
 export PATH=$PATH:~/.composer/vendor/bin
 
 # The next line enables shell command completion for gcloud.
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # Kubectl completion
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
@@ -42,3 +43,9 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# MySQL Client
+PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Direnv
+eval "$(direnv hook zsh)"

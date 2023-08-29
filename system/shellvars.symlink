@@ -33,3 +33,6 @@ source /Users/michiel.rensen/.config/op/plugins.sh
 source ~/.kubech/kubech
 #source $HOME/.kubech/completion/kubechn.zsh
 #source $HOME/.kubech/completion/kubechc.zsh
+
+# CircleCI
+export CIRCLECI_TOKEN=$(op read op://Personal/CircleCI/token)

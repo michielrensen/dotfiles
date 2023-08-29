@@ -39,4 +39,10 @@ fi
 export GPG_TTY=$(tty)
 
 source ~/.profile
-autoload -U compinit && compinit
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
