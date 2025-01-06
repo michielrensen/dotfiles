@@ -34,5 +34,5 @@ source ~/.kubech/kubech
 #source $HOME/.kubech/completion/kubechn.zsh
 #source $HOME/.kubech/completion/kubechc.zsh
 
-# CircleCI
-export CIRCLECI_TOKEN=$(op read op://Personal/CircleCI/token)
+# Tenv
+export TENV_AUTO_INSTALL=true

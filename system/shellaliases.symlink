@@ -53,9 +53,9 @@ alias lco-ssh="~/src/ecom-devtools/lco-tools/lco-ssh"
 alias lsmake='GOOGLE_APPLICATION_CREDENTIALS="/Users/michiel.rensen/.config/gcloud/application_default_credentials.json" make'
 
 # VAULT
-alias old-vault-dev="export VAULT_ADDR=https://vault.lightspeedappdev.com && vault login -method=github"
-alias old-vault-stg="export VAULT_ADDR=https://vault.lightspeedappstg.com && vault login -method=github"
-alias old-vault-prd="export VAULT_ADDR=https://vault.lightspeedapp.com && vault login -method=github"
+alias old-vault-dev="export VAULT_ADDR=https://vault.lightspeedappdev.com && vault login -method=github && unset VAULT_TOKEN"
+alias old-vault-stg="export VAULT_ADDR=https://vault.lightspeedappstg.com && vault login -method=github && unset VAULT_TOKEN"
+alias old-vault-prd="export VAULT_ADDR=https://vault.lightspeedapp.com && vault login -method=github && unset VAULT_TOKEN"
 
 # Ansible
 alias ap="ansible-playbook"
@@ -77,6 +77,9 @@ alias jgioprd="old-vault-prd && jinn gaia init prd"
 alias jgwl="jinn gaia workspace list"
 alias jgws="jinn gaia workspace select"
 
+# Kubectl Switch
+alias ktx="switch"
+alias kns="switcher namespace"
 
 # GIT
   local gprefix
@@ -260,3 +263,5 @@ alias jgws="jinn gaia workspace select"
   alias ${gprefix}..='cd "$(git-root || print .)"'
   alias ${gprefix}\?='git-alias-lookup'
   alias assume="source assume"
+  alias tfenv="tenv tf"
+
