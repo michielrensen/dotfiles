@@ -39,13 +39,23 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 # GO
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # MySQL Client
-PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Rbenv
+eval "$(rbenv init - zsh)"
+
+# Kubectl Switcher
+eval "$(switcher init zsh)"
+source <(compdef _switcher switch)

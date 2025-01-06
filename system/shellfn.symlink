@@ -173,6 +173,13 @@ function gfp() {
 }
 
 # Vault
+vault-lab() {
+  VAULT_TOKEN_FILE="$HOME/.vault-token-lab"
+  export VAULT_ADDR="https://vault-lab.lightspeedsbx.app";
+  export VAULT_TOKEN=$(vault login -token-only "$(cat $VAULT_TOKEN_FILE 2>/dev/null)" || vault login -token-only -method=oidc)
+  printf "%s" "$VAULT_TOKEN" >"$VAULT_TOKEN_FILE" && chmod 600 "$VAULT_TOKEN_FILE"
+}
+
 vault-dev() {
   VAULT_TOKEN_FILE="$HOME/.vault-token-dev"
   export VAULT_ADDR="https://vault.lightspeedsbx.app";
