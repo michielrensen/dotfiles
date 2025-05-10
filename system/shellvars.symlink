@@ -29,10 +29,5 @@ export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave B
 # 1Password
 source /Users/michiel.rensen/.config/op/plugins.sh
 
-#Kubec (https://github.com/aabouzaid/kubech)h
-source ~/.kubech/kubech
-#source $HOME/.kubech/completion/kubechn.zsh
-#source $HOME/.kubech/completion/kubechc.zsh
-
 # Tenv
 export TENV_AUTO_INSTALL=true
