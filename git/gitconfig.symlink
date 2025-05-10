@@ -1,10 +1,22 @@
 [include]
     path = ~/.gitconfig.local
 [github]
-  # https://github.com/blog/180-local-github-config
-  user = michielrensen
+  #https://github.com/blog/180-local-github-config
+  user = ls-michielrensen
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/  
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKuyHoIw2aOxsOWRGYVUxR+1hkR2dQbm9IB1Un6iekYv
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
 [color]
 # ui = true is a superset of all the more specific color options
 #  as documented at http://book.git-scm.com/5_customizing_git.html
@@ -99,9 +111,5 @@
   required = true
 	process = git-lfs filter-process
 
-[commit]
-	gpgSign = true
 [tag]
 	forceSignAnnotated = true
-[pull]
-	rebase = false
