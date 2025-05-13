@@ -1,0 +1,4 @@
+getantidote/use-omz                   # Ensure OMZ plugin dependencies work
+ohmyzsh/ohmyzsh path:lib              # Make Zsh more featureful
+ohmyzsh/ohmyzsh path:plugins/extract  # Use cool OMZ plugins
+romkatv/powerlevel10k
